@@ -1,0 +1,11 @@
+{
+"title" : "[E2]PlayURL Extension",
+"type" : "tool",
+"tags" : [ "fun", "build" ],
+"ignore" :
+[
+"*.psd",
+"*.vcproj",
+"*.svn*"
+]
+}
