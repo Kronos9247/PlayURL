@@ -1,0 +1,41 @@
+@name example_playurl_level by kronos9247
+@inputs 
+@outputs 
+@persist Sound:playurl
+@trigger 
+
+interval(1)
+runOnLast(1)
+
+if(first()){Sound=playURL("test","url")}
+
+if(first()) { holoCreate(1) holoCreate(2) }
+if(first()) { holoPos(1,entity():toWorld(vec(30,0,0))) }
+if(first()) { holoPos(2,entity():toWorld(vec(-30,0,0))) }
+if(first()) { holoParent(1,entity()) holoParent(2,entity())
+}
+
+if(Sound:isSetuped() == 0) {
+    Sound:setVolume(1)
+    Sound:setPos(entity():pos())
+    
+}
+
+local Level=Sound:getLevelArray()
+holoScale(1,vec(1,1,Level[1,number]*10))
+holoScale(2,vec(1,1,Level[2,number]*10))
+
+if(changed(owner():keyUse())&&owner():keyUse()) {
+    Sound:pause()
+}
+if(changed(owner():keyReload())&&owner():keyReload()) {
+    Sound:play()
+}
+if(changed(owner():keyPressed("Pad_1"))&&owner():keyPressed("Pad_1")) {
+    Sound:setVolume(0.5)
+    print(Sound:getVolume())
+}
+
+if(last()) {
+    Sound:stop()
+}
