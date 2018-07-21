@@ -1,5 +1,5 @@
 # Outdated
-This project won't be updated in the future
+**This project won't be updated in the future**
 
 
 
