@@ -1,3 +1,8 @@
+# Outdated
+This project won't be updated in the future
+
+
+
 This is a extension for expression 2. Most functions from IGModAudioChannel are in the core. 
 I hope the community had fun with this liddel thing. The importent functions are .... 
 
